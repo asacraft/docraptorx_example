@@ -1,0 +1,11 @@
+div.container
+  = form_for @conn, page_path(@conn, :create), [as: :document], fn f ->
+    div.form-group
+      label URL
+      = text_input f, :url, class: "form-control"
+    div.checkbox
+      label
+        = checkbox f, :async
+        | async
+    div.form-group
+      = submit "Create PDF", class: "btn btn-primary"

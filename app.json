@@ -1,0 +1,17 @@
+{
+  "name": "Docraptorx Example Application",
+  "env": {
+    "SECRET_KEY_BASE": {
+      "description": "secret_key_base for production",
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    "docraptor",
+    "papertrail"
+  ],
+  "buildpacks": [
+    { "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git" },
+    { "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git" }
+  ]
+}
