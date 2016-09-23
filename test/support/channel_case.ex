@@ -20,11 +20,6 @@ defmodule DocraptorxSample.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias DocraptorxSample.Repo
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
-
 
       # The default endpoint for testing
       @endpoint DocraptorxSample.Endpoint
@@ -32,11 +27,6 @@ defmodule DocraptorxSample.ChannelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DocraptorxSample.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(DocraptorxSample.Repo, {:shared, self()})
-    end
 
     :ok
   end

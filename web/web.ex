@@ -18,11 +18,7 @@ defmodule DocraptorxSample.Web do
 
   def model do
     quote do
-      use Ecto.Schema
-
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
+      # Define common model functionality
     end
   end
 

@@ -14,7 +14,6 @@ defmodule DocraptorxSample.PageController do
       callback_url: DocraptorxSample.Router.Helpers.url(conn) <> "/callback",
       test: true
     }
-    IO.inspect(options)
     response = Docraptorx.create!(options)
     if options.async do
       conn

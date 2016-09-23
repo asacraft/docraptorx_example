@@ -5,10 +5,6 @@
 # is restricted to this project.
 use Mix.Config
 
-# General application configuration
-config :docraptorx_sample,
-  ecto_repos: []
-
 # Configures the endpoint
 config :docraptorx_sample, DocraptorxSample.Endpoint,
   url: [host: "localhost"],
