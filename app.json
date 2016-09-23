@@ -4,6 +4,10 @@
     "SECRET_KEY_BASE": {
       "description": "secret_key_base for production",
       "generator": "secret"
+    },
+    "HOST": {
+      "description": "e.g. your_app_name.herokuapp.com",
+      "value": ""
     }
   },
   "addons": [
