@@ -12,10 +12,9 @@ if (elem && elem.value) {
   channel.on("completed", msg => {
     let a = document.createElement("a")
     a.setAttribute("href", msg.url)
-    a.textContent = "Download"
-    let target = document.getElementById("alert")
-    target.textContent = null
-    target.appendChild(a)
+    a.textContent = "Download PDF"
+    let alert = document.getElementById("alert")
+    alert.parentNode.replaceChild(a, alert)
   })
   channel.on("failed", msg => { alert("failed") })
   channel.push("status", { status_id: elem.value })
