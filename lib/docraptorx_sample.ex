@@ -14,7 +14,10 @@ defmodule DocraptorxSample do
       # worker(DocraptorxSample.Worker, [arg1, arg2, arg3]),
     ]
 
-    Docraptorx.configure(System.get_env("DOCRAPTOR_API_KEY"))
+    Docraptorx.configure(
+      System.get_env("DOCRAPTOR_API_KEY"),
+      System.get_env("DOCRAPTOR_URL")
+    )
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
